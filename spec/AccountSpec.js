@@ -17,7 +17,8 @@ describe("Account", function() {
 
   describe("When depositing", function(){
     it("the balance is updated", function(){
-      
+      account.deposit(10);
+      expect(account.currentBalance()).toEqual(10)
     })
   });
 
