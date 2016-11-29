@@ -1,3 +1,8 @@
+# Refactor ideas
+- make balance only stored in one location (transactions) and change balance on account class to a function that iterates and sums all changes to balance
+- make a class to return a line to be printed from transaction info
+- make a class to print the statement
+
 ## Specification
 
 ### Requirements

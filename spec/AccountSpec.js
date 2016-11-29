@@ -1,16 +1,12 @@
 describe("Account", function() {
-  var account;
+  var account, transaction;
 
   beforeEach(function() {
-    account = new Account();
+    account = new Account(10);
   });
 
   describe("When an account is instantiated", function() {
-    it(" normally has a balance of 0", function(){
-      expect(account.currentBalance()).toEqual(0);
-    })
     it("can be instantiated with a positive balance", function(){
-      account = new Account(10);
       expect(account.currentBalance()).toEqual(10)
     })
   });
@@ -18,15 +14,23 @@ describe("Account", function() {
   describe("When depositing", function(){
     it("the balance is updated", function(){
       account.deposit(10);
-      expect(account.currentBalance()).toEqual(10)
+      expect(account.currentBalance()).toEqual(20)
     })
   });
 
   describe("When withdrawing", function(){
     it("the balance is updated", function(){
-      account = new Account(10)
       account.withdraw(10);
       expect(account.currentBalance()).toEqual(0)
+    });
+
+    describe("When making a transaction", function(){
+      it("creates a new transaction object", function(){
+        account = new Account(10);
+        expect(account.statement.transactions()).toEqual(0)
+        account.withdraw(10);
+        expect(account.statement.transactions()).toEqual(1)
+      })
     })
   });
 
