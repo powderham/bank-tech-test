@@ -22,6 +22,14 @@ describe("Account", function() {
     })
   });
 
+  describe("When withdrawing", function(){
+    it("the balance is updated", function(){
+      account.deposit(10);
+      expect(account.currentBalance()).toEqual(10)
+    })
+  });
+
+
   // demonstrates use of spies to intercept and test method calls
   // it("tells the current song if the user has made it a favorite", function() {
   //   spyOn(song, 'persistFavoriteStatus');
