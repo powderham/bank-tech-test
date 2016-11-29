@@ -24,8 +24,9 @@ describe("Account", function() {
 
   describe("When withdrawing", function(){
     it("the balance is updated", function(){
-      account.deposit(10);
-      expect(account.currentBalance()).toEqual(10)
+      account = new Account(10)
+      account.withdraw(10);
+      expect(account.currentBalance()).toEqual(0)
     })
   });
 
