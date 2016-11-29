@@ -21,3 +21,31 @@ date       || credit || debit   || balance
 13/01/2012 || 2000.00||         || 3000.00
 10/01/2012 || 1000.00||         || 1000.00
 ```
+
+-------------
+
+### User Stories
+
+```
+As a user,
+So I know how much money I have,
+I need to see my current balance
+```
+
+```
+As a user,
+So I can save my money,
+I need to be able to deposit my money in to my account
+```
+
+```
+As a user,
+So I can use my money,
+I need to be able to withdraw my money from my account
+```
+
+```
+As a user,
+So I can have a record of my transactions,
+I need to be able to print a history of my current account with the date
+```
