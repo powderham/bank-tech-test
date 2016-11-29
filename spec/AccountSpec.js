@@ -6,7 +6,19 @@ describe("Account", function() {
   });
 
   describe("When an account is instantiated", function() {
+    it(" normally has a balance of 0", function(){
+      expect(account.currentBalance()).toEqual(0);
+    })
+    it("can be instantiated with a positive balance", function(){
+      account = new Account(10);
+      expect(account.currentBalance()).toEqual(10)
+    })
+  });
 
+  describe("When depositing", function(){
+    it("the balance is updated", function(){
+      
+    })
   });
 
   // demonstrates use of spies to intercept and test method calls

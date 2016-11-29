@@ -1,6 +1,7 @@
-function Account() {
+function Account(balance = 0) {
+  this._balance = balance
 }
-Player.prototype.play = function(song) {
-  this.currentlyPlayingSong = song;
-  this.isPlaying = true;
+
+Account.prototype.currentBalance = function() {
+  return this._balance
 };
