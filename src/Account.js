@@ -7,9 +7,17 @@ Account.prototype.currentBalance = function() {
 };
 
 Account.prototype.deposit = function(amount) {
-  this._balance += amount
+  this.updateBalance(amount)
 };
 
 Account.prototype.withdraw = function(amount) {
-  this._balance -= amount
+  this.updateBalance(-amount)
+};
+
+Account.prototype.updateBalance = function (amount) {
+  this._balance += amount
+};
+
+Account.prototype.recordTransaction = function () {
+
 };
